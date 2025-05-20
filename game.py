@@ -86,16 +86,8 @@ class DominoGame:
         
         print(f"\n{Color.CYAN}Tabuleiro:{Color.RESET}", end=" ")
         
-        # Para tabuleiros longos, adiciona reticências no meio
-        if len(self.board) > 10:
-            for piece in self.board[:5]:
-                print(piece, end=" ")
-            print(f"{Color.YELLOW}...{Color.RESET}", end=" ")
-            for piece in self.board[-5:]:
-                print(piece, end=" ")
-        else:
-            for piece in self.board:
-                print(piece, end=" ")
+        for piece in self.board:
+            print(piece, end=" ")
         
         print(f"\n{Color.CYAN}Extremidades:{Color.RESET} Esquerda={self.ends[0]}, Direita={self.ends[1]}")
     
